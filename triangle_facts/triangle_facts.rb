@@ -6,15 +6,15 @@ class Triangle
     @side1, @side2, @side3 = side1, side2, side3
   end
 
-  def equilateral()
+  def equilateral
     return side1 == side2 && side2 == side3
   end
 
-  def isosceles()
+  def isosceles
     return [side1, side2, side3].uniq.length == 2
   end
 
-  def scalene()
+  def scalene
     unless !(equilateral || isosceles)
       false
     else
@@ -35,7 +35,7 @@ class Triangle
     puts ''
   end
 
-  def calculate_angles(a,b,c)
+  def calculate_angles(a, b, c)
     angleA = radians_to_degrees(Math.acos((b**2 + c**2 - a**2) / (2.0 * b * c)))
     angleB = radians_to_degrees(Math.acos((a**2 + c**2 - b**2) / (2.0 * a * c)))
     angleC = radians_to_degrees(Math.acos((a**2 + b**2 - c**2) / (2.0 * a * b)))
