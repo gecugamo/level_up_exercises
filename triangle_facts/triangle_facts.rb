@@ -24,7 +24,8 @@ class Triangle
 
   def recite_facts
     puts 'This triangle is equilateral!' if equilateral
-    puts 'This triangle is isosceles! Also, that word is hard to type.' if isosceles
+    puts 'This triangle is isosceles! ' \
+	'Also, that word is hard to type.' if isosceles
     puts 'This triangle is scalene and mathematically boring.' if scalene
 
     angles = self.calculate_angles(side1, side2, side3)
